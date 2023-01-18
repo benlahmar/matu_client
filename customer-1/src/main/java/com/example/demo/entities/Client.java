@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.entities;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -15,14 +15,17 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "utilisateur")
-@NamedQuery(name = "abc",query = "select c from Client c where c.nom=?1 and c.adresse.ville=?2")
+@NamedQuery(name = "Client.abc",query = "select c from Client c where c.nom=?1 and c.adress.ville=?2")
 public class Client {
 
+	
 	@Id
 	@GeneratedValue
 	long id;
 	@Column(nullable = false, name = "username")
 	String nom;
+	
+	
 	
 	@ElementCollection
 	@OrderColumn

@@ -10,6 +10,8 @@ import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import com.example.demo.entities.Adresse;
+import com.example.demo.entities.Client;
 import com.example.demo.repo.IClient;
 
 @SpringBootApplication
@@ -44,6 +46,8 @@ public class Customer1Application implements CommandLineRunner{
 		c1=crepo.save(c1);
 		
 		
-		System.out.println(c1.getId());
+//		System.out.println(c1.getId());
+//		
+		//crepo.Getclient().forEach(x -> System.out.println(x.getNom()));
 	}
 }
